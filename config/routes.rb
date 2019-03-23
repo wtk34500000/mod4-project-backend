@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get "/videos/:id" => "api/videos#show"
   # resources :histories
   get '/login' => 'api/users#login'
+  post "/users" => 'users#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
