@@ -1,4 +1,10 @@
 class HistoriesController < ApplicationController
+    def index 
+        @hises=History.all
+        render json: @hises
+    end
+    
+    
     def create
         @his=History.create(his_params)
         render json: @his

@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   get '/current_user', to: 'api/auth#show'
 
   post '/histories', to: 'histories#create'
+  get 'histories', to: 'histories#index'
 
   post '/videos', to: 'videos#create'
+  get '/videos', to: 'videos#index'
 
   post '/comments', to: 'comments#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
