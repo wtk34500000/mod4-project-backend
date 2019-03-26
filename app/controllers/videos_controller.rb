@@ -1,12 +1,12 @@
 class VideosController < ApplicationController
     def index
         @videos=Video.all
-        render json: @videos 
+        render json: @videos
     end
-    
+
     def create
-        @video=Video.create(video_params)
-        render json: @video 
+        @video=Video.find_or_create_by(video_params)
+        render json: @video
     end
 
     private

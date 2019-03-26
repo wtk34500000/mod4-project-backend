@@ -4,10 +4,10 @@ class CommentsController < ApplicationController
         render json: @comment
     end
 
-    private 
+    private
 
-    def comment_params 
-        params.require(:comment).permit(:history_id, :content)
+    def comment_params
+        params.require(:comment).permit(:history_id, :content, :user_name)
     end
 
 end

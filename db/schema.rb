@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_03_21_182524) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.string "user_name"
     t.integer "history_id"
     t.string "content"
     t.datetime "created_at", null: false
