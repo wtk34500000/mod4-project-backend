@@ -18,10 +18,4 @@ class Api::AuthController < ApplicationController
       render json: {user: @user}
   
     end
-  
-    # private
-  
-    # def user_login_params
-    #   params.require(:user).permit(:email, :password)
-    # end
   end
