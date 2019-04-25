@@ -17,6 +17,8 @@ class UsersController < ApplicationController
 
 
   def create
+    puts params
+    puts userParams
     @newUser = User.create(userParams)
     #  render json: @newUser
 

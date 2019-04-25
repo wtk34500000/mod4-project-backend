@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get "/videos/:id" => "api/videos#show"
   # resources :histories
   # post '/login' => 'users#login'
-  post "/users" => 'users#create'
+  post "/users", to: 'users#create'
 
   namespace :api do
     post '/login', to: 'auth#create'
