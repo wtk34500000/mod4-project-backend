@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   # post '/login' => 'users#login'
   post "/users" => 'users#create'
 
-  post '/login', to: 'api/auth#create'
-  get '/current_user', to: 'api/auth#show'
-
+  namespace :api do
+    post '/login', to: 'auth#create'
+    get '/current_user', to: 'auth#show'
+  end
+  
   post '/histories', to: 'histories#create'
   get 'histories', to: 'histories#index'
 
